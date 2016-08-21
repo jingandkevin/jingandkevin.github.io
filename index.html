@@ -1,119 +1,313 @@
+
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Jing &amp; Kevin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jing + Kevin">
-    <meta name="author" content="Kevin Wu">
-    <link rel="shortcut icon" href="img/embed.png">
-
-     <!-- FACEBOOK META -->
-    <meta property='og:locale' content='en_US'/>
-    <meta property="og:title" content="Your site title goes here" />
-    <meta property="og:description" content="Your Description goes here" />
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="http://yoursite.com/">
-    <meta property="og:image" content="http://yoursite.com/img/logo.png" />
-    <meta property="fb:admins" content="111111111111"/>
-
-    <!-- TWITTER META -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@yourtwitteraccount">
-    <meta name='twitter:image' content='http://www.yoursite.com/img/logo.png'>
-    <meta name="twitter:description" content="Your Description">
-
-    <!-- CONONICAL -->
-    <link rel="canonical" href="http://www.yoursite.com/" />
-
-    <!-- GOOGLE PLUS -->
-    <link rel="publisher" href="https://plus.google.com/111111111111/about"/>
-
-    <title>Helios -  A simply beautiful and elegant bootstrap template</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <meta name="description" content="Jing and Kevin Wedding Website - February 19, 2017 in Brooklyn, NY.">
+    <meta name="author" content="Kevin Wu h/t Rafael Campos">
+    <link rel="icon" href="/static/images/favicon.ico">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	</head>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Third-party css libraries go here -->
+    <link href="/static/css/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="/static/css/simpletextrotator.css" rel="stylesheet">
+    <link href="/css/et-line-font.css" rel="stylesheet">
+    <link href="/static/css/magnific-popup.css" rel="stylesheet">
+    <link href="/static/css/flexslider.css" rel="stylesheet">
+    <link href="/static/css/owl.carousel.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+     
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+ <!--   
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-	<body>
+    ga('create', 'UA-66816913-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+-->    
+    
+    
+</head>
 
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-fixed-top">
+<body>
+    <!-- Preloader -->
+    <div class="page-loader">
+        <div class="loader">Loading...</div>
+    </div>
+    <!-- Navigation here -->
+    
+<!-- Language selection
+<span style="visibility: hidden;">
+    <form id="en-form" action="/i18n/setlang/" method="post"><input type='hidden' name='csrfmiddlewaretoken' value='dFVRHIreTXpjCk0xoQ6CH5rlQ5QK076G' />
+                <input name="next" type="hidden" value="/" />
+                <input name="language" type="hidden" value="en" />
+    </form>
+    <form id="pt-form" action="/i18n/setlang/" method="post"><input type='hidden' name='csrfmiddlewaretoken' value='dFVRHIreTXpjCk0xoQ6CH5rlQ5QK076G' />
+            <input name="next" type="hidden" value="/" />
+            <input name="language" type="hidden" value="br" />   
+    </form>
+</span>
+ -->
+<!-- Navigation start -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">Jing &amp; Kevin</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">WEDDING</a></li>
-          <li><a href="rsvp.html">RSVP</a></li>
-          <li><a href="travel.html">TRAVEL</a></li>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"> JY <i class="fa fa-fw"> &#xf004; </i> KW </a>
+        <div class="navbar-right font-alt" style="position:relative; top: 4px;"> <h4>February 19, 2017</h4></div>
+        </div>
+        <div class="collapse navbar-collapse" id="custom-collapse">
+            <ul class="nav navbar-nav navbar-right">
+            <!--
+                <li><a href="/story/" class="section-scroll">Our Story</a></li>
+                <li><a href="/event/" class="section-scroll">The Events</a></li> -->
+                <li><a href="/travel/" class="section-scroll">Travel Plans</a></li> <!--
+                <li><a href="/registry/" class="section-scroll">Registry</a></li>
+                <li><a href="/rsvp/" class="section-scroll">RSVP</a></li>
+             -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navigation end -->
+ 
+
+<section class=
+"home-section home-parallax home-fade home-full-height
+ bg-dark-30" id="home">
+    <div class="hero-slider">
+                                   
+        <ul class="slides">
+            <li class="bg-dark-60 bg-dark" style=
+            "background-image:url(/static/images/L51A2006.2.jpg)">
+            
+    <div class="hs-caption">
+        <div class="caption-content">
+            <div class="hs-title-size-2 font-alt mb-30">
+                Our Wedding
+            </div>
+
+            <div class="hs-title-size-4 font-alt mb-30">
+                Kevin 
+                <span class="icon-heart"></span>
+                Jing&nbsp;
+            </div>
+
+            <div class="hs-title-size-2 font-alt mb-40">
+                February 19, 2017 <br>
+                Brooklyn, NY 
+            <!--</div><a class="section-scroll btn btn-w btn-round btn-lg" href=
+            "/rsvp/">RSVP</a>-->
+        </div>
+    </div>
+            </li>
+
+            <li class="bg-dark-60 bg-dark" style=
+            "background-image:url(/static/images/L51A2016.jpg)">
+    		
+    <div class="hs-caption">
+        <div class="caption-content">
+            <div class="hs-title-size-2 font-alt mb-30">
+                Our Wedding
+            </div>
+
+            <div class="hs-title-size-4 font-alt mb-30">
+                Kevin 
+                <span class="icon-heart"></span>
+                Jing&nbsp;
+            </div>
+
+            <div class="hs-title-size-2 font-alt mb-40">
+                February 19, 2017 <br>
+                Brooklyn, NY 
+            <!--</div><a class="section-scroll btn btn-w btn-round btn-lg" href=
+            "/rsvp/">RSVP</a>-->
+        </div>
+    </div>
+            </li>
+
+            <li class="bg-dark-60 bg-dark" style=
+            "background-image:url(/static/images/L51A2054.jpg)">
+            
+    <div class="hs-caption">
+        <div class="caption-content">
+            <div class="hs-title-size-2 font-alt mb-30">
+                Our Wedding
+            </div>
+
+            <div class="hs-title-size-4 font-alt mb-30">
+                Kevin 
+                <span class="icon-heart"></span>
+                Jing&nbsp;
+            </div>
+
+            <div class="hs-title-size-2 font-alt mb-40">
+                February 19, 2017 <br>
+                Brooklyn, NY 
+            <!--</div><a class="section-scroll btn btn-w btn-round btn-lg" href=
+            "/rsvp/">RSVP</a>-->
+        </div>
+    </div>
+            </li>
         </ul>
-      </div>
     </div>
-  </div>
 
-  <!-- hero -->
-  <section class="animated fadeIn" id="hero">
-    <div class="container-fluid hero">
-      <div class="row">
-        <div class="col-md-12 col-xsm-12">
-          <h1>Jing &amp; Kevin</h1>
-          <h2>February 19th, 2017</h2>
-          <h2>Brooklyn, NY</h2>
-          <p><a href="rsvp.html" class="btn outline">RSVP</a></p>
-        </div> <!-- end col -->
-      </div><!-- end container -->
-    </div> <!-- end row -->
-  </section>
+</section><!-- Home end -->
 
-  <!-- our story -->
-  <section class="alt">
-    <div class="container-fluid">
-      <div class="container">
-        <div class="col-md-8 col-md-offset-2 col-sm-12 section text-center">
-          <h2>Please join Jing and Kevin from February 18th - 20th, 2017 as we celebrate our wedding in Brooklyn, NY.</h2>
-        </div>
-        <div class="col-md-4">
-          <img src="img/poopy.jpg" alt="Me at the forest!" class="img-responsive">
-          <h2>Jing's Story</h2>
-          <p>Jing went to the University of Pennsylvania for undergrad and MIT for her MBA. She is a management consultant for Deloitte, is from White Plains NY, and actively volunteers for Asian-American charities.</p>
-        </div>
-        <!-- Jess -->
-        <div class="col-md-4">
-          <img src="img/IMG_20150313_111432.jpg" alt="Jess" class="img-responsive">
-          <h2>Kevin's Story</h2>
-          <p>Kevin went to the University of Virginia where he studied Systems Engineering and won the Gusburger Eating contest in 2005. He was born and raised in NJ, but has spent his last 10 years in New York City.</p>
-        </div>
-
-        <div class="col-md-4">
-          <img src="img/WA0006.jpg" alt="Me at the forest!" class="img-responsive">
-          <h2>Our Story</h2>
-          <p>We met in 2012 on OKCupid. Kevin was Jing's first online date and she has never looked back.</p>
-        </div>
-      </div>
+    <!-- Scroll-up -->
+    <div class="scroll-up">
+        <a class="fa fa-angle-double-up" href="#totop" style="font-style: italic"></a>
     </div>
-  </section>
+     
+<!--
+<div class="alerts">
+    <div id="myAlert" class="alert alert-danger fade">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong><span aria-hidden="true" class="icon-alarmclock"></span> &nbsp;
+    RSVP is now closed!</strong> If you need to change your response, please do so and also send us a message.<a href="/rsvp/">Click here to RSVP now.</a>
+    </div>
+</div>
+-->
 
 
+    <!-- Le javascript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <!-- Latest JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Your stuff: Third-party javascript libraries go here -->
+    <script src="/static/js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="/static/js/appear.js"></script>
+    <script src="/static/js/jquery.simple-text-rotator.min.js"></script>
+    <script src="/static/js/jqBootstrapValidation.js"></script>
+    <script src="/static/js/isotope.pkgd.min.js"></script>
+    <script src="/static/js/imagesloaded.js"></script>
+    <script src="/static/js/jquery.flexslider-min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/jquery.fitvids.js"></script>
+    <script src="/static/js/smoothscroll.js"></script>
+    <script src="/static/js/wow.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/custom.js"></script>
+    
+    <script type="text/javascript">
+    (function($) {
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-	</body>
+        $(document).ready(function() {
+
+            /* ---------------------------------------------- /*
+             * Contact form ajax
+             /* ---------------------------------------------- */
+            happy = false;
+            $('#contact-form').find('input,textarea').jqBootstrapValidation({
+                preventSubmit: true,
+                submitError: function($form, event, errors) {
+                    // additional error messages or events
+                },
+                submitSuccess: function($form, event) {
+                    event.preventDefault();
+
+                    var submit = $('#contact-form submit');
+                    var ajaxResponse = $('#contact-response');
+                    var captchaMessage = $('#captcha-message');
+
+                    var name = $("input#cname").val();
+                    var email = $("input#cemail").val();
+                    var message = $("textarea#cmessage").val();
+
+                    var check;
+
+                    if ($("#g-recaptcha-response").val()) {
+                        check = $.ajax({
+                            type: 'POST',
+                            url: '/en/contact-form//test',
+                            dataType: 'json',
+                            data: {
+                                csrfmiddlewaretoken: 'dFVRHIreTXpjCk0xoQ6CH5rlQ5QK076G',
+                                captchaResponse: $("#g-recaptcha-response").val(),
+                            },
+                            success: function(data) {
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '/en/contact-form/',
+                                    dataType: 'json',
+                                    data: {
+                                        csrfmiddlewaretoken: 'dFVRHIreTXpjCk0xoQ6CH5rlQ5QK076G',
+                                        name: name,
+                                        email: email,
+                                        message: message,
+                                    },
+                                    cache: false,
+                                    beforeSend: function(result) {
+                                        submit.empty();
+                                        submit.append('<i class="fa fa-cog fa-spin"></i> Wait...');
+                                    },
+                                    success: function(result) {
+                                        $form.fadeOut(500);
+                                        ajaxResponse.html(result.message);
+                                    }
+                                });
+                            },
+                            error: function(data) {
+                                captchaMessage.html("Something looks wrong with the Captcha there.");
+                            }
+                        });
+                    } else {
+                        captchaMessage.html("Are you sure the Captcha has been completed?");
+                    }
+
+                }
+            });
+
+        });
+
+    })(jQuery);
+    </script>
+    
+<script>
+function showAlert() {
+    $("#myAlert").addClass("in");
+}
+
+window.setTimeout(function () {
+    showAlert();
+}, 1610);
+</script>
+
+
+</body>
+
 </html>
