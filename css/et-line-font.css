@@ -1,11 +1,11 @@
 
 @font-face {
 	font-family: 'et-line';
-	src:url('//dm1f8asdca1xf.cloudfront.net/static/fonts/et-line.26ec3c7d0366.eot');
-	src:url('//dm1f8asdca1xf.cloudfront.net/static/fonts/et-line.26ec3c7d0366.eot?#iefix') format('embedded-opentype'),
-		url('//dm1f8asdca1xf.cloudfront.net/static/fonts/et-line.woff') format('woff'),
-		url('//dm1f8asdca1xf.cloudfront.net/static/fonts/et-line.98126e3e1238.ttf') format('truetype'),
-		url('//dm1f8asdca1xf.cloudfront.net/static/fonts/et-line.569bd9082c15.svg#et-line') format('svg');
+	src:url('/static/fonts/et-line.eot');
+	src:url('/static/fonts/et-line.eot?#iefix') format('embedded-opentype'),
+		url('/static/fonts/et-line.woff') format('woff'),
+		url('/static/fonts/et-line.ttf') format('truetype'),
+		url('/static/fonts/et-line.svg#et-line') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
