@@ -21,7 +21,7 @@
     <!-- Third-party css libraries go here -->
     <link href="/static/css/bootstrap-switch.min.css" rel="stylesheet">
     <link href="/static/css/simpletextrotator.css" rel="stylesheet">
-    <link href="/css/et-line-font.css" rel="stylesheet">
+    <link href="/static/css/et-line-font.css" rel="stylesheet">
     <link href="/static/css/magnific-popup.css" rel="stylesheet">
     <link href="/static/css/flexslider.css" rel="stylesheet">
     <link href="/static/css/owl.carousel.css" rel="stylesheet">
@@ -878,7 +878,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- Your stuff: Third-party javascript libraries go here -->
-    <script src="/static/js/jquery.mb.YTPlayer.min.js"></script>
     <script src="/static/js/appear.js"></script>
     <script src="/static/js/jquery.simple-text-rotator.min.js"></script>
     <script src="/static/js/jqBootstrapValidation.js"></script>
@@ -889,82 +888,7 @@
     <script src="/static/js/jquery.fitvids.js"></script>
     <script src="/static/js/smoothscroll.js"></script>
     <script src="/static/js/wow.min.js"></script>
-    <script src="/static/js/owl.carousel.min.js"></script>
     <script src="/static/js/custom.js"></script>
-
-    <script type="text/javascript">
-    (function($) {
-
-        $(document).ready(function() {
-
-            /* ---------------------------------------------- /*
-             * Contact form ajax
-             /* ---------------------------------------------- */
-            happy = false;
-            $('#contact-form').find('input,textarea').jqBootstrapValidation({
-                preventSubmit: true,
-                submitError: function($form, event, errors) {
-                    // additional error messages or events
-                },
-                submitSuccess: function($form, event) {
-                    event.preventDefault();
-
-                    var submit = $('#contact-form submit');
-                    var ajaxResponse = $('#contact-response');
-                    var captchaMessage = $('#captcha-message');
-
-                    var name = $("input#cname").val();
-                    var email = $("input#cemail").val();
-                    var message = $("textarea#cmessage").val();
-
-                    var check;
-
-                    if ($("#g-recaptcha-response").val()) {
-                        check = $.ajax({
-                            type: 'POST',
-                            url: '/en/contact-form//test',
-                            dataType: 'json',
-                            data: {
-                                csrfmiddlewaretoken: 'dFVRHIreTXpjCk0xoQ6CH5rlQ5QK076G',
-                                captchaResponse: $("#g-recaptcha-response").val(),
-                            },
-                            success: function(data) {
-                                $.ajax({
-                                    type: 'POST',
-                                    url: '/en/contact-form/',
-                                    dataType: 'json',
-                                    data: {
-                                        csrfmiddlewaretoken: 'dFVRHIreTXpjCk0xoQ6CH5rlQ5QK076G',
-                                        name: name,
-                                        email: email,
-                                        message: message,
-                                    },
-                                    cache: false,
-                                    beforeSend: function(result) {
-                                        submit.empty();
-                                        submit.append('<i class="fa fa-cog fa-spin"></i> Wait...');
-                                    },
-                                    success: function(result) {
-                                        $form.fadeOut(500);
-                                        ajaxResponse.html(result.message);
-                                    }
-                                });
-                            },
-                            error: function(data) {
-                                captchaMessage.html("Something looks wrong with the Captcha there.");
-                            }
-                        });
-                    } else {
-                        captchaMessage.html("Are you sure the Captcha has been completed?");
-                    }
-
-                }
-            });
-
-        });
-
-    })(jQuery);
-    </script>
 
 <!-- AddThisEvent -->
 <script type="text/javascript" src="https://addthisevent.com/libs/1.6.0/ate.min.js"></script>
